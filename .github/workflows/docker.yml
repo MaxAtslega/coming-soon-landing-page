@@ -12,7 +12,7 @@ jobs:
     name: Build
     steps:
       - name: Check Out Repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: What
         run: echo "BRANCH=${GITHUB_REF##*/}" >> $GITHUB_ENV
       - uses: actions/setup-node@v1
