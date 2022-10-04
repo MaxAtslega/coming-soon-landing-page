@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Check Out Repo
         uses: actions/checkout@v2
+      - name: What
+        run: echo "BRANCH=${GITHUB_REF##*/}" >> $GITHUB_ENV
       - uses: actions/setup-node@v1
         with:
           node-version: 16
@@ -38,7 +40,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: pcr.atslega.network/MaxAtslega/cooming-soon-landing-page:${GITHUB_REF##*/}
+          tags: pcr.atslega.network/cooming-soon-landing-page:${{ env.BRANCH }}
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
