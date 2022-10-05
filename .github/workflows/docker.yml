@@ -23,7 +23,7 @@ jobs:
       - run: yarn run build
 
       - name: Login to Private Container Registry
-        uses: docker/login-action@v1
+        uses: docker/login-action@v2
         with:
           registry: pcr.atslega.network
           username: ${{ secrets.DOCKER_USERNAME }}
