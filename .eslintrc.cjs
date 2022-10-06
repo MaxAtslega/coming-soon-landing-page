@@ -39,7 +39,7 @@ module.exports = {
   ],
   rules: {
     "semi": ["error", "never"],
-    "prettier/prettier": ["error"],
+    "prettier/prettier": ["error", {endOfLine: 'lf'}],
     'prefer-const': 'error',
     'no-var': 'error',
     'no-multiple-empty-lines': 'error',
