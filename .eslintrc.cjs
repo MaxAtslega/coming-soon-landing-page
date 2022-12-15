@@ -46,5 +46,6 @@ module.exports = {
     "no-multi-spaces": "error",
     "no-console": "error",
     "import/no-unresolved": "error",
+    "react/react-in-jsx-scope": "off",
   }
 }
