@@ -40,7 +40,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: pcr.atslega.network/cooming-soon-landing-page:${{ env.BRANCH }}
+          tags: pcr.atslega.network/coming-soon-landing-page:${{ env.BRANCH }}
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}

@@ -39,8 +39,7 @@ module.exports = {
   ],
   rules: {
     "semi": ["error", "never"],
-    "prettier/prettier": ["error"],
-    'prefer-const': 'error',
+    'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     'no-var': 'error',
     'no-multiple-empty-lines': 'error',
     "no-multi-spaces": "error",

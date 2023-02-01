@@ -39,4 +39,15 @@ export const GlobalStyles = createGlobalStyle`
   ul, li, ol {
     list-style: none;
   }
+  
+  a{
+    color: #ffffff;
+    text-decoration: none;
+    
+    &:hover {
+      opacity: .8;
+    }
+  }
+  
+  
 `

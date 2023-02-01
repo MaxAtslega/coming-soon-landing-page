@@ -6,7 +6,6 @@ import { RouterProvider } from 'react-router-dom'
 import de from '@/i18n/messages/DE-de.json'
 import en from '@/i18n/messages/EN-us.json'
 import { IntlProvider } from 'react-intl'
-import Header from '@/components/Header'
 
 const messages = { 'DE-de': de, 'EN-us': en }
 const localeMap = { de: 'DE-de', 'de-de': 'DE-de', en: 'EN-us', 'en-us': 'EN-us' }
@@ -28,9 +27,8 @@ const App: React.FC = () => {
   return (
     <>
       <GlobalStyles />
-      <IntlProvider locale={locale} messages={messages[locale]} defaultLocale={'EN-us'}>
-        <Header onLocaleChange={onLocaleChange} />
-        <RouterProvider router={router} />
+      <IntlProvider locale={locale} messages={messages[locale]} defaultLocale={'DE-de'}>
+        <RouterProvider router={router(onLocaleChange)} />
       </IntlProvider>
     </>
   )
