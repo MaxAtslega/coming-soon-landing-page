@@ -16,7 +16,7 @@ const App: React.FC = () => {
   const [locale, setLocale] = useState<keyof typeof messages>(
     localeFromStorage != null
       ? (localeFromStorage as keyof typeof messages)
-      : (localeMap[browserLang] as keyof typeof messages)
+      : ((localeMap[browserLang] !== undefined ? localeMap[browserLang] : 'EN-us') as keyof typeof messages)
   )
 
   const onLocaleChange = (locale: keyof typeof messages): void => {
@@ -27,7 +27,7 @@ const App: React.FC = () => {
   return (
     <>
       <GlobalStyles />
-      <IntlProvider locale={locale} messages={messages[locale]} defaultLocale={'DE-de'}>
+      <IntlProvider locale={locale} messages={messages[locale]} defaultLocale={'EN-us'}>
         <RouterProvider router={router(onLocaleChange)} />
       </IntlProvider>
     </>
