@@ -39,12 +39,12 @@ module.exports = {
   ],
   rules: {
     "semi": ["error", "never"],
-    "prettier/prettier": ["error"],
-    'prefer-const': 'error',
+    'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     'no-var': 'error',
     'no-multiple-empty-lines': 'error',
     "no-multi-spaces": "error",
     "no-console": "error",
     "import/no-unresolved": "error",
+    "react/react-in-jsx-scope": "off",
   }
 }
